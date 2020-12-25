@@ -11,8 +11,7 @@
         #bridge {
             display: block;
             margin: 0 auto;
-            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/calgary-bridge-1943.jpg');
-            background-image: -webkit-image-set(url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/calgary-bridge-1943.jpg') 1x, url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/calgary-bridge-1943-2x.jpg') 2x);
+            background-image: url('https://shop.harborfreight.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/6/3/63759_W3.jpg');
             background-size: cover;
             width: 100%;
             max-width: 750px;
@@ -29,6 +28,10 @@
         #bridgeContainer figcaption {
             margin-top: 2rem;
         }
+        
+        h1 {
+            text-align: center;
+        }
     </style>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,9 +43,10 @@
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
+        <h1>Click & drag to unwrap!</h1>
         <figure id="bridgeContainer">
-            <canvas id="bridge" width="750" height="465"></canvas>
-            <figcaption>Downtown Calgary in 2013 and 1943; mouse down or touch on photo to reveal</figcaption>
+            <canvas id="bridge" width="1200" height="1200"></canvas>
+            <figcaption>Merry Christmas Elizabeth!<br>Love, Thomas</figcaption>
         </figure>
     </div>
     <script>
@@ -56,14 +60,10 @@
         img.onload = function () {
             bridgeCanvas.drawImage(img, 0, 0, bridge.width, bridge.height);
         }
-        img.loc = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/';
-        img.filename = 'calgary-bridge-2013.jpg';
-        if (window.devicePixelRatio >= 2) {
-            var nameParts = img.filename.split('.');
-            img.src = img.loc + nameParts[0] + "-2x" + "." + nameParts[1];
-        } else {
-            img.src = img.loc + img.filename;
-        }
+        // https://cdn.shopify.com/s/files/1/1901/3435/products/97310rc-caspari-christmas-lights-gift-wrap-roll-in-red-holographic-paper-30-x-8-roll-4818815483951_1024x1024.jpg
+        img.loc = 'https://cdn.shopify.com/s/files/1/1901/3435/products/';
+        img.filename = '97310rc-caspari-christmas-lights-gift-wrap-roll-in-red-holographic-paper-30-x-8-roll-4818815483951_1024x1024.jpg';
+        img.src = img.loc + img.filename;
 
         function detectLeftButton(event) {
             if ('buttons' in event) {
