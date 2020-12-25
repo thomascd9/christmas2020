@@ -11,7 +11,7 @@
         #bridge {
             display: block;
             margin: 0 auto;
-            background-image: url('IMG_3935.JPG');
+            background-image: url('https://images-na.ssl-images-amazon.com/images/I/91dzktcbFcL._AC_SL1500_.jpg');
             background-size: cover;
             width: 100%;
             max-width: 750px;
@@ -28,7 +28,7 @@
         #bridgeContainer figcaption {
             margin-top: 2rem;
         }
-
+        
         h1 {
             text-align: center;
         }
@@ -46,7 +46,7 @@
         <h1>Click & drag to unwrap!</h1>
         <figure id="bridgeContainer">
             <canvas id="bridge" width="1200" height="1200"></canvas>
-            <figcaption>Merry Christmas Alexander!<br>Love, Thomas</figcaption>
+            <figcaption>Merry Christmas Elizabeth!<br>Love, James</figcaption>
         </figure>
     </div>
     <div style="text-align: center;" >
@@ -63,6 +63,7 @@
         img.onload = function () {
             bridgeCanvas.drawImage(img, 0, 0, bridge.width, bridge.height);
         }
+        // https://previews.123rf.com/images/hicster/hicster0910/hicster091000019/5757348-christmas-wrapping-paper.jpg
         img.loc = 'https://previews.123rf.com/images/hicster/hicster0910/hicster091000019/';
         img.filename = '5757348-christmas-wrapping-paper.jpg';
         img.src = img.loc + img.filename;
