@@ -45,7 +45,7 @@
     <div id="root">
         <h1>Click & drag to unwrap!</h1>
         <figure id="bridgeContainer">
-            <canvas id="bridge" width="900" height="1200"></canvas>
+            <canvas id="bridge" width="1200" height="1200"></canvas>
             <figcaption>Merry Christmas Alexander!<br>Love, Thomas</figcaption>
         </figure>
     </div>
@@ -60,9 +60,8 @@
         img.onload = function () {
             bridgeCanvas.drawImage(img, 0, 0, bridge.width, bridge.height);
         }
-        // https://cdn.shopify.com/s/files/1/1901/3435/products/97310rc-caspari-christmas-lights-gift-wrap-roll-in-red-holographic-paper-30-x-8-roll-4818815483951_1024x1024.jpg
-        img.loc = 'https://cdn.shopify.com/s/files/1/1901/3435/products/';
-        img.filename = '97310rc-caspari-christmas-lights-gift-wrap-roll-in-red-holographic-paper-30-x-8-roll-4818815483951_1024x1024.jpg';
+        img.loc = 'https://previews.123rf.com/images/hicster/hicster0910/hicster091000019/';
+        img.filename = '5757348-christmas-wrapping-paper.jpg';
         img.src = img.loc + img.filename;
 
         function detectLeftButton(event) {
